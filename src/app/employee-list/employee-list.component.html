@@ -1,0 +1,40 @@
+<div class="card margin">
+    <div class="card-header">
+        <h5>{{title}}</h5>
+    </div>
+    <div class="card-body">
+        
+    <div class="table-responsive">
+
+        <table class="table center">
+            <thead class="">
+                <tr>
+                    <th>Id</th>
+                    <th>Documento</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employee; let indice=index">
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.firstName}}</td>
+                    <td>{{emp.documentNumber}}</td>
+                    <td>{{emp.lastName}}</td>
+                    <td>{{emp.phoneNumber}}</td>
+                    <td>{{emp.emailAddress}}</td>
+                    <td>
+                        <button class="btn btn-primary" routerLink="/editar-empleado/{{ emp.id }}">Editar</button>
+                        <button class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    </div>
+</div>

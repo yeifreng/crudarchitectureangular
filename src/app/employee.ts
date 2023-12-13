@@ -5,8 +5,8 @@ export class Employee{
     lastName: string;
     lastName2: string;
     documentNumber: string;
-    phone: string;
-    email: string;
+    phoneNumber: string;
+    emailAddress: string;
 
     constructor(firstName: string, secondName: string, lastName: string, lastName2: string, documentNumber: string, phone: string, email: string){
         this.firstName = firstName;
@@ -14,8 +14,8 @@ export class Employee{
         this.lastName = lastName;
         this.lastName2 = lastName2;
         this.documentNumber = documentNumber;
-        this.phone = phone;
-        this.email = email;
+        this.phoneNumber = phone;
+        this.emailAddress = email;
     }
     
 }
