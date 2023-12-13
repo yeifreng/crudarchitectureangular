@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Employee } from '../employee';
 import { CreateServiceService } from '../services/createService/create-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-employee',
@@ -29,10 +30,18 @@ export class EmployeeComponent {
     addEmployee(){
       let myEmployee = new Employee(this.firstName, this.secondName, this.lastName, this.lastName2, this.documentNumber, this.phoneNumber, this.emailAddress);
       console.log(myEmployee);
-      this.createService.addEmployee(myEmployee).subscribe(respuesta=>{
+      this.createService.addEmployee(myEmployee).subscribe(respuesta=>{;
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Empleado agregado con exito",
+          showConfirmButton: false,
+          timer: 1000
+        });
         this.router.navigate(['lista-empleados']);
       });
-      
     }
+
+    
 
 }
