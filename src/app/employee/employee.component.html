@@ -6,41 +6,38 @@
             </div>
             <div class="card-body">
                 <form class="form-group">
-                    <div class="row g-2 align-items-center">
 
-                        <div class="col-auto">
-                            <label class="form-label">Documento</label>
+                        <div class="mb-3">
+                            <label class="form-label">Documento *</label>
+                            <input [(ngModel)]= "documentNumber"  type="text" class="form-control" name="documentNumber" id="documentNumber" placeholder="Documento empleado" required>
                         </div>
-                        <div class="col-auto">
-                            <input  type="text" class="form-control" name="documentNumber" id="documentNumber" placeholder="Documento empleado" required>
+                        <div class="mb-3">
+                            <label class="form-label">Primer Nombre *</label>
+                            <input [(ngModel)]= "firstName"  type="text" class="form-control" name="firstName" id="firstName" placeholder="Primer nombre" required>
                         </div>
-                        <div class="col-auto">
-                            <label class="form-label">Primer Nombre</label>
-                            <input  type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre empleado" required>
-                        </div>
-                        <div class="col-auto">
+                        <div class="mb-3">
                             <label class="form-label">Segundo Nombre</label>
-                            <input  type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre empleado" required>
+                            <input [(ngModel)]= "secondName"  type="text" class="form-control" name="secondName" id="secondName" placeholder="Segundo nombre" required>
                         </div>
-                        <div class="col-auto">
-                            <label class="form-label">Primer Apellido</label>
-                            <input  type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre empleado" required>
+                        <div class="mb-3">
+                            <label class="form-label">Primer Apellido *</label>
+                            <input [(ngModel)]= "lastName"  type="text" class="form-control" name="lastName" id="lastName" placeholder="Primer apellido" required>
                         </div>
-                        <div class="col-auto">
+                        <div class="mb-3">
                             <label class="form-label">Segundo Apellido</label>
-                            <input  type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido empleado" required>
+                            <input [(ngModel)]= "lastName2"  type="text" class="form-control" name="lastName2" id="lastName2" placeholder="Segundo apellido" required>
                         </div>
-                        <div class="col-auto">
-                            <label class="form-label">Telefono</label>
-                            <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Cargo empleado" required>
+                        <div class="mb-3">
+                            <label class="form-label">Telefono *</label>
+                            <input [(ngModel)]= "phoneNumber" type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Numero de telefono" required>
                         </div>
-                        <div class="col-auto">
-                            <label class="form-label">Correo Electronico</label>
-                            <input  type="text" class="form-control" name="salario" id="salario" placeholder="Salario empleado" required>
+                        <div class="mb-3">
+                            <label class="form-label">Correo Electronico *</label>
+                            <input [(ngModel)]= "emailAddress"  type="text" class="form-control" name="emailAddress" id="emailAddress" placeholder="Correo electronico" required>
                         </div>
-
-                    </div>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+                        <div class="mb-3">
+                            <button (click)="addEmployee()" type="submit" class=" form-control btn btn-primary">Enviar</button>
+                        </div>
                 </form>
             </div>
         </div>
