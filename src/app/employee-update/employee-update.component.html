@@ -1,1 +1,46 @@
-<p>employee-update works!</p>
+<div class="row center">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>{{title}}</h5>
+            </div>
+            <div class="card-body">
+                <form class="form-group">
+
+                        <div class="mb-3">
+                            <label class="form-label">Documento *</label>
+                            <input disabled="true" [(ngModel)]= "documentNumber"  type="text" class="form-control" name="documentNumber" id="documentNumber" placeholder="Documento empleado" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Primer Nombre *</label>
+                            <input [(ngModel)]= "firstName"  type="text" class="form-control" name="firstName" id="firstName" placeholder="Primer nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Segundo Nombre</label>
+                            <input [(ngModel)]= "secondName"  type="text" class="form-control" name="secondName" id="secondName" placeholder="Segundo nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Primer Apellido *</label>
+                            <input [(ngModel)]= "lastName"  type="text" class="form-control" name="lastName" id="lastName" placeholder="Primer apellido" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Segundo Apellido</label>
+                            <input [(ngModel)]= "lastName2"  type="text" class="form-control" name="lastName2" id="lastName2" placeholder="Segundo apellido" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Telefono *</label>
+                            <input [(ngModel)]= "phoneNumber" type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Numero de telefono" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Correo Electronico *</label>
+                            <input [(ngModel)]= "emailAddress"  type="text" class="form-control" name="emailAddress" id="emailAddress" placeholder="Correo electronico" required>
+                        </div>
+                        <div class="mb-3">
+                            <button (click)="updateEmployee()" type="button" class=" form-control btn btn-primary">Editar</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

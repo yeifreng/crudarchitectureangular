@@ -8,13 +8,15 @@ import { Employee } from 'src/app/employee';
 })
 export class CreateServiceService {
 
-  url:string = 'http://localhost/empleados-main/';
-
   constructor(private clientHttp: HttpClient){ }
+
+  url:string = '/api/employee';
+
+
 
   addEmployee(employee:Employee):Observable<any>{
     //se envia la información por metodo post
     //por medio de la función insertar se envian los datos del empleado
-    return this.clientHttp.post(this.url+"?insertar=1",employee);
+    return this.clientHttp.post(this.url ,employee);
   }
 }
