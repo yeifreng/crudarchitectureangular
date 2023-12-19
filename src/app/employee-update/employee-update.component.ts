@@ -39,7 +39,7 @@ export class EmployeeUpdateComponent {
   
 
   updateEmployee():void{
-    let employee = new Employee(this.documentNumber, this.firstName, this.secondName, this.lastName, this.lastName2, this.phoneNumber, this.emailAddress);
+    let employee = new Employee(this.id, this.documentNumber, this.firstName, this.secondName, this.lastName, this.lastName2, this.phoneNumber, this.emailAddress);
     this.updateService.updateEmployee(employee).subscribe(respuesta=>{
 
       Swal.fire({

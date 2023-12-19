@@ -16,7 +16,7 @@ export class EmployeeComponent {
   }
 
     //formulario es el componente padre
-    id:any;
+    id:null;
     firstName:string;
     secondName:string;
     lastName:string;
@@ -29,7 +29,7 @@ export class EmployeeComponent {
     
 
     addEmployee(){
-      let myEmployee = new Employee(this.documentNumber, this.firstName, this.secondName, this.lastName, this.lastName2, this.phoneNumber, this.emailAddress);
+      let myEmployee = new Employee(this.id, this.documentNumber, this.firstName, this.secondName, this.lastName, this.lastName2, this.phoneNumber, this.emailAddress);
       console.log(myEmployee);
       this.createService.addEmployee(myEmployee).subscribe(respuesta=>{
         Swal.fire({
